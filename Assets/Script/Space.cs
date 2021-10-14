@@ -68,7 +68,7 @@ public class Space : MonoBehaviour
             for (int c = 0; c < gameController.GetSize(); ++c)
             {
                 Space target = gameController.GetSpace(r, c);
-                if (target != null)
+                if (target != null && gameController.Distance(this, target) == 1)
                 {
                     results.Add(target);
                 }
